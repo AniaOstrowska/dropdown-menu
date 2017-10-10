@@ -7,7 +7,7 @@
 
     /* Styles */
     background: #fff;
-    border-radius: 4px;
+    border-radius: 2px;
     border: 1px solid rgba(0,0,0,0.15);
     box-shadow: 0 1px 1px rgba(50,50,50,0.1);
     cursor: pointer;
@@ -31,6 +31,12 @@
     border-width: 6px 6px 0 6px;
     border-style: solid;
     border-color: #707f8d transparent;
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+    -webkit-transition: transform 0.5s linear;
+    -moz-transition: transform 0.5s linear;
+    -o-transition: transform 0.5s linear;
+    transition: transform 0.5s linear;
 }
 
 .wrapper-dropdown-3 .dropdown {
@@ -50,6 +56,7 @@
     list-style: none;
     font-family: "Arial", sans-serif;
     font-size: 15px;
+    padding:0;
 
     /* Hiding */
     opacity: 0;
@@ -57,6 +64,7 @@
 }
 
 .wrapper-dropdown-3 .dropdown li a {
+    border-left: solid 4px white;
     display: block;
     padding: 15px;
     text-decoration: none;
@@ -72,18 +80,18 @@
     margin-right: 15px;
 }
 .wrapper-dropdown-3 .dropdown li:first-of-type a {
-    border-radius: 7px 7px 0 0;
+    border-radius: 2px 2px 0 0;
 }
 
 .wrapper-dropdown-3 .dropdown li:last-of-type a {
-    border-radius: 0 0 7px 7px;
-    border: none;
+    border-radius: 0 0 2px 2px;
 }
 
 /* Hover state */
 
 .wrapper-dropdown-3 .dropdown li:hover a {
     background: #f3f8f8;
+    border-left: solid 4px #4cbeff;
 }
 
 .wrapper-dropdown-3 .dropdown:after {
@@ -93,7 +101,7 @@
     position: absolute;
     bottom: 100%;
     right: 15px;
-    border-width: 0 6px 6px 6px;
+    border-width: 0 8px 8px 8px;
     border-style: solid;
     border-color: #fff transparent;
 }
@@ -105,7 +113,7 @@
     position: absolute;
     bottom: 100%;
     right: 13px;
-    border-width: 0 8px 8px 8px;
+    border-width: 0 10px 10px 10px;
     border-style: solid;
     border-color: rgba(0,0,0,0.1) transparent;
 }
@@ -121,7 +129,7 @@
 }
 
 .wrapper-dropdown-3.active {
-    border-radius: 5px 5px 5px 5px;
+    border-radius: 2px;
     background: #4cbeff;
     box-shadow: none;
     border-bottom: none;
@@ -130,11 +138,17 @@
 
 .wrapper-dropdown-3.active:after {
     border-color: white transparent;
-    border-width: 0 6px 6px 6px;
+    border-width: 6px 6px 0 6px;
+    -webkit-transform: rotate(-180deg);
+    transform: rotate(-180deg);
+    -webkit-transition: transform 0.5s linear;
+    -moz-transition: transform 0.5s linear;
+    -o-transition: transform 0.5s linear;
+    transition: transform 0.5s linear;
 }
 
 .wrapper-dropdown-3.active .dropdown {
-    border-bottom: 1px solid rgba(0,0,0,0.2);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
     max-height: 400px;
     opacity: 1;
     pointer-events: auto;
